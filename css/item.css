@@ -1,0 +1,308 @@
+.b-top{
+    font-family: "OpenSans";
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+    padding: 0 40px;
+    box-sizing: border-box;
+    line-height: 3;
+}
+.b-top:hover{
+    color: crimson;
+}
+.b-banner{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+}
+.b-banner_First{
+    background-image: url(../img/bannerBig.jpg);
+    width: 50%;
+    height: 100%;
+}
+.b-banner_First,
+.b-banner_Second,
+.b-banner_Third{
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.b-banner_Second,
+.b-banner_Third{
+    width: 25%;
+    height: 100%;
+}
+.b-banner_Second{
+    background-image: url(../img/bannerMiddle.jpg);
+}
+.b-banner_Third{
+    background-image: url(../img/bannerSmall.jpg);
+}
+
+/*INFO*/
+.b-content{
+    width: 100%;
+    height: 600px;
+    padding: 50px 30px;
+    box-sizing: border-box;  
+    display: flex;
+    flex-direction: row;
+}
+.b-content_slider{
+    width: 50%;
+    height: 100%;
+    background-color: antiquewhite;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.b-content_desription{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.b-content_desriptionTitle{
+    font-size: 22px;
+    font-weight: 600;
+}
+.b-content_desriptionText{
+    padding: 10px 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.b-content_desriptionText_cursive{
+    font-size: 16px;
+    font-family: "Times New Roman",cursive;
+    font-style: italic;
+    line-height: 2;
+}
+.b-content_desriptionText_price{
+    line-height: 4;
+    font-size: 20px;
+}
+.b-content_choose{
+    display: flex;
+    flex-direction: column;
+}
+.b-content_choose span{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+.b-content_choose_Input{
+    display: inline-block;
+    padding-left: 20px;
+}
+.b-content_choose_Input input[type=radio] {
+    display: none;
+}
+.b-content_choose_Input label {
+	display: inline-block;
+	cursor: pointer;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 15px;
+}
+.b-content_choose_Input input[type=radio]:checked + label {
+	border: 1px solid #999;
+}
+.b-content_but{
+    text-align: center;
+    outline: none;
+}
+.b-content_button{
+    width: 60%;
+    height: 60px;
+    border: 1px solid lightgray;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    margin: 40px 0;
+    outline: none;
+}
+.b-content_button:hover{
+    border: 1px solid crimson;
+}
+.b-content_button a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: block;
+    font-family: "OpenSans";
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    line-height: 3;
+}
+.b-content_button a:hover{
+    color: crimson;
+}
+
+.b-content_slider_mySlides{
+    display: none;
+    width: 100%;
+    height: 370px;
+    
+}
+.b-content_slider_mySlides img{
+    object-fit: cover;
+}
+.b-content_slider_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.b-content_slider_row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.b-content_slider_column{
+    width: 33.3%; 
+    background-color: black;
+}
+.b-content_slider_column img{
+    height: 130px;
+    object-fit: cover;
+}
+.b-content_slider_elements{
+    cursor: pointer;
+    background: black;
+}
+.active{
+    opacity: 0.4;
+}
+
+@media only screen and (max-width:900px){
+    .b-banner{
+        height: 300px;
+    }
+    .b-banner_First,
+    .b-banner_Second,
+    .b-banner_Third{
+        background-size: cover;
+    }
+}
+@media only screen and (max-width:850px){
+    .b-banner{
+        height: 250px;
+    }
+    .b-banner_First{
+        width: 70%;
+        background-position: center;
+    }
+    .b-banner_Second{
+        width: 30%;
+        background-size: cover;
+        background-position: bottom;
+    }
+    .b-banner_Third{
+        display: none;
+    }
+    .b-content{
+        flex-direction: column;
+        height: auto;
+    }
+    .b-content_slider{
+        flex-direction: row;
+        height: 400px;
+        width: 100%;
+    }
+    .b-content_slider_mySlides{
+        width: 75%;
+        height: 100%;
+    }
+    .b-content_slider_row{
+        width: 25%;
+        flex-direction: column;
+    }
+    .b-content_slider_column{
+        width: 100%;
+    }
+    .b-content_slider_column img{
+        height:133px;
+    }
+    .b-content_desription{
+        padding-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .b-content_desriptionText{
+        flex-direction: column-reverse;
+        padding-bottom: 30px;
+    }
+    .b-content_desriptionText_cursive{
+        padding: 0 100px;
+        box-sizing: border-box;
+    }
+}
+@media only screen and (max-width:550px){
+     .b-footer{
+        padding: 0 15px;
+        margin-top: 200px;
+    }
+    .b-banner{
+        height: 250px;
+    }
+    .b-banner_First{
+        width: 100%;
+        background-size: cover;
+    }
+    .b-banner_Second{
+        display: none;
+    }
+    .b-content_slider{
+        flex-direction: column;
+    }
+    .b-content_slider_row{
+        flex-direction: row;
+        width: 100%;
+    }
+    .b-content_slider_mySlides{
+        width: 100%;
+        height: 75%;
+    }
+     .b-content_slider_column{
+        width: 33.3%;
+         height: 130px;
+    }
+    .b-content_slider_column img{
+        height: 100%;
+    }
+    .b-content_desription{
+        padding: 0;
+        padding-top: 50px;
+    }
+    .b-content_desriptionText_cursive{
+        padding: 0;
+    }
+    .b-content_desriptionText_price{
+        line-height: 3;
+    }
+    .b-content_choose{
+        text-align: left;
+    }
+}
+@media only screen and (max-width:450px){
+    .b-content_slider_column{
+         height: 100px;
+    }
+    .b-content_choose_Input{
+        padding-left: 10px;
+    }
+}
+@media only screen and (max-width:400px){
+    .b-content_choose_Input{
+        padding-left: 0;
+    }
+}

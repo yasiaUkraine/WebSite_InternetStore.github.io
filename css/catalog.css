@@ -1,0 +1,473 @@
+.b-magazine{
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+    height: 1850px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+.b-magazine_item{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+     
+}
+.b-magazine_wrapper{
+     width: 25%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 30px;
+    
+    box-sizing: border-box;
+    background-color: white;
+    float: left;
+    float: right;
+}
+.b-magazine_wrapper:hover .b-offer_name{
+    color: crimson;
+}
+.b-magazine_ad{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    line-height: 2;
+    clear: both;
+    position: relative;
+    padding-bottom: 60px;
+}
+.b-magazine_footer{
+    width: 100%;
+    text-align: center;
+    height: 150px;
+}
+.b-magazine_adBold{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "OpenSans";
+    text-align: center;
+}
+.b-magazine_adBold a{
+    color: crimson;
+}
+.b-magazine_adCursive{
+   font-size: 16px;
+    font-family: "Times New Roman",cursive;
+    font-style: italic;
+    text-align: center;
+}
+#phrase2,
+#phrase3{
+    display: none;
+}
+.b-magazine_button{
+     width: 30%;
+    height: 50px;
+    border: 1px solid lightgray;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    margin: 40px 0;
+    font-family: "OpenSans";
+    font-weight: 600;
+    font-size: 20px;
+    outline: none;
+}
+.b-magazine_button:hover{
+    border-color: crimson;
+    color: crimson;
+    cursor: pointer;
+}
+
+.b-sort{
+    height: 100%;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    text-align: center;
+    height: 60px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.b-sort_wrapper{
+    position: relative;
+    font-family: "OpenSans";
+    font-size: 18px;
+    height: 100%;
+    width: 17%;
+    text-align: left;
+}
+.b-sort_wrapperNew{
+    background-color: whitesmoke;
+}
+
+.b-sort_titlechoose{
+    color: crimson;
+}
+.b-sort_wrapper select{
+    display: none;
+}
+.b-sort_wrapperTitle{
+    padding: 0 15px;
+    padding-top: 10%;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 100%;
+    border-right: 1px solid gray;
+}
+.b-sort_wrapperTitleSmall{
+    padding: 0 15px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.b-sort_wrapperTitleChoose{
+     padding: 0 15px;
+    font-size: 18px;
+    color: crimson;
+}
+.b-sort_wrapperTitle:after{
+     position: absolute;
+    content: "";
+    top: 50%;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-color:black transparent transparent transparent;
+}
+.b-sort_selectOption{
+    background-color: white;
+    border: 1px solid gray;
+    position: absolute;
+    top: 58px;
+    width: 100%;
+    z-index: 200;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+.b-sort_selectOption div{
+    padding: 10px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+.b-sort_selectOption div:hover{
+    background-color: whitesmoke;
+    color: crimson;
+}
+.b-sort_selectHide{
+    display: none;
+}
+.b-sort-wrapperBig{
+    height: 100%;
+    width: 90%;
+    position: relative;
+    display: none;
+    
+}
+.b-sort_wrapperTitle_Big{
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+    line-height: 3;
+    text-align: left;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+}
+.b-sort_wrapperTitle_Big:after{
+     position: absolute;
+    content: "";
+    top: 50%;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-color:black transparent transparent transparent;
+    z-index: 400;
+    outline: 20px;
+    outline-color: white;
+}
+.b-sort_tablet{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 200;
+    position: absolute;
+    top: 58px;
+    background-color: white;
+    display: none;
+}
+.b-sort_tablet ul{
+   padding: 10px 15px;
+    width: 200px;
+    list-style-position: inside;
+    text-align: left;
+}
+.b-sort_tablet a{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+.b-sort_tablet li{
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+}
+.b-sort_gray{
+    color: gray;
+}
+.b-sort_red{
+    color: crimson;
+}
+.b-sort_black{
+    color: black;
+}
+.redCross{
+    color: crimson;
+    font-size: 25px;
+    font-weight: 600;
+    position: absolute;
+    top: -5px;
+    right: 13px;
+    z-index: 500;
+    visibility: hidden;
+    cursor: pointer;
+   
+}
+.hide{
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
+
+.b-filter{
+    height: 100%;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.b-filter_Category{
+    position: relative;
+    font-family: "OpenSans";
+    font-size: 18px;
+    height: 100%;
+    width: auto;
+    text-align: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.b-filter_Category label{
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 15px;
+}
+.b-filter_Category button{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid gray;
+    outline: none;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.b-filter_Category button:hover{
+     color: crimson;
+    border-color: crimson;
+}
+.b-catalog_oldPrice:before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid coral;
+    width: 60px;
+    height: 20px;
+    top: 8px;
+    transform: rotate(-25deg);
+}
+.b-catalog_oldPrice{
+    color: gray;
+    font-size: 15px;
+    position: relative;
+}
+@media only screen and (max-width:950px){
+    .b-magazine_wrapper{
+        padding: 20px 15px;
+    }
+}
+@media only screen and (max-width:850px){
+    .b-magazine_wrapper{
+        padding: 20px 5px;
+        
+    }
+    .b-magazine_adBold{
+        font-size: 20px;
+    }
+    .b-sort_wrapperTitle{
+        padding-right: 0;
+        padding-left: 2px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+@media only screen and (max-width:800px){
+    .b-magazine_wrapper{
+        padding: 20px;
+        width: 33.3%;
+    }
+    #phrase3{
+        display: block;
+    }
+    #phrase4{
+        display: none;
+    }
+    .b-magazine_ad{
+        padding: 20px 70px;
+        padding-top: 0;
+    }
+    .b-magazine{
+        height: 1800px;
+    }
+    .b-sort_wrapper{
+        display: none;
+    }
+    .b-sort-wrapperBig{
+        display: block;
+    }
+    .b-filter{
+        margin: 0;
+        padding: 0;
+    }
+    .b-filter_Category button{
+        padding: 0;
+        width: 100px;
+        height: 40px;
+    }
+}
+@media only screen and (max-width:650px){
+    .b-magazine_wrapper{
+        padding: 20px 10px;
+    }
+    .b-sort_wrapperTitle_Big{
+        font-size: 16px;
+        line-height: 4;
+    }
+    .redCross{
+        top: -20px;
+    }
+}
+@media only screen and (max-width:550px){
+     .b-footer{
+        padding: 0 15px;
+        margin-top: 200px;
+    }
+    .b-magazine_wrapper{
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 50%;
+        height: 450px;
+    }
+    #phrase2{
+        display: block;
+    }
+    #phrase3{
+        display: none;
+    }
+    .b-magazine_adBold{
+       padding-bottom: 10px; 
+    }
+    .b-magazine_item{
+        height: 100%;
+    }
+    .b-magazine{
+        height: 1700px;
+    }
+    .b-sort{
+        margin-top: 0;
+        border-top: none;
+    }
+    .b-sort-wrapperBig{
+        width: 100%;
+        
+    }
+    .b-sort_tablet ul{
+        width: 40%;
+    }
+    .b-sort_tablet a{
+        font-size: 18px;
+    }
+    .b-sort_tablet li{
+        font-size: 15px;
+        padding-right: 0;
+    }
+    .b-filter{
+        flex-direction: column;
+        height: auto;
+    }
+    .b-filter_Category{
+        padding-bottom: 10px;
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width:450px){
+    .b-magazine_wrapper{
+        width: 50%;
+        height: 400px;
+    }
+    .b-magazine_item{
+        height: 100%;
+    }
+    .b-product_foto{
+        height: 250px;
+    }
+    .b-magazine_ad{
+        padding: 20px 30px;
+    }
+    .b-magazine_button{
+        width: 60%;
+    }
+    .b-magazine{
+        height: 2000px;
+    }
+    .b-sort_tablet li{
+        font-size: 15px;
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width:400px){
+    .b-magazine{
+        height: 2000px;
+    }
+    .b-sort_tablet li{
+/*        font-size: 15px;*/
+        padding-left: 0;
+    }
+    .b-sort_tablet ul{
+        padding-left: 10px;
+    }
+}

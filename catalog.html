@@ -1,0 +1,286 @@
+<!DOCTYPE>
+<html>
+    <head><title></title>
+     <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/catalog.css">
+           <link rel="stylesheet" type="text/css" href="css/start.css">
+           <link rel="stylesheet" type="text/css" href="css/item.css">
+           <link rel="stylesheet" type="text/css" href="css/shopping-bag.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header class="b-header">
+            <a class="b-header_title" href="start.html">Template</a>
+            <a class="b-header_title2" href="start.html">TL</a>
+            <div class="b-header_left">
+                 <span class="b-header_email">E-mail sing up</span>
+                
+                `<a class="b-header_bag"><i class="fa fa-shopping-bag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;<a id="b-header_bag" class="b-header_bag" href='shopping-bag.html'>Bag (0)</a></a>
+            </div>
+        </header>
+        <section class="main">
+              <nav class="b-menu" id="id-menu">
+            <nav class="b-menu_nav" tabindex='1' onblur="showMenu()" onfocus="closeMenu()">
+            <div class="b-menu_blockNav">
+                <ul class="b-menu_link">
+            <a href="" class="b-menu_title"><li class="b-menu_titleLi" id="women">Women</li></a>
+            <a href="" class="b-menu_title"><li id="man">Men</li></a>
+            <a href="" class="b-menu_title"><li>Handbags</li></a>
+            <a href="" class="b-menu_title"><li>Accesories</li></a>
+            <a href="" class="b-menu_title"><li>Sale</li></a>
+            <a href="" class="b-menu_title"><li>New Arrivals</li></a>
+            <a href="" class="b-menu_title"><li>Clearance</li></a>
+            <a href="" class="b-menu_title"><li>Store Locator</li></a>
+            <li id="lastLi">
+                 <div class="b-menu_blockSearch">
+                <div class="b-menu_divSearch">
+                    <input type="search" placeholder="Style name" class="b-menu_search">
+                    <input type="button" class="b-menu_searchButton">
+                </div>
+                
+            </div>
+            </li>
+        </ul>
+                </div>
+            </nav>  
+            <div class="b-menu_blockSearch" id="firstLi">
+                <div class="b-menu_divSearch">
+                    <input type="search" placeholder="Style name" class="b-menu_search">
+                    <input type="button" class="b-menu_searchButton" onclick="showSearch()" tabindex="1">
+                </div>
+                
+            </div>  
+                  <div class="b-menu_blockSearchTablet">
+                <input type="search" placeholder="Style name" class="b-menu_search hideS" id='searchTablet'>
+                <input type="button" class="b-menu_searchTablet" onclick="showSearch()" tabindex="1">
+            </div>
+        </nav>
+            <nav class="b-sort">
+
+                <div class="b-sort-wrapperBig">
+                    <div class="b-sort_wrapperTitle_Big" id="b-sort_wrapperTablet">
+                         <div class="redCross">&#10006;</div>
+                    </div>
+                     <div class="b-sort_tablet">
+                        
+            <ul>
+                <a>Fashion</a>
+                <li>Not selected</li>
+                <li>Nail the 90s</li>
+                <li>Casual style</li>
+                <li>New look</li>
+                <li>Sport</li>
+                <li>Vintage</li>
+                <li>Classical style</li>
+            </ul>
+            <uL><a>Product type</a>
+                <li>Not selected</li>
+                <li>Coats &amp; Jackets</li>
+                <li>Dresses</li>
+                <li>Jersey Tops</li>
+            </uL>
+            <ul><a>Color</a>
+                <li>Not selected</li>
+                <li>Black</li>
+                <li>Blue</li>
+                <li>Red</li>
+                <li>Green</li>
+                <li>Golden</li>
+            </ul>
+            <ul><a>Brand</a>
+                <li>Not selected</li>
+                <li>Chi Chi London</li>
+                <li>Antipodium</li>
+                <li>Adidas</li>
+                <li>New Balance</li>
+                <li>River Island</li>
+            </ul>
+            <ul><a>Size</a>
+                <li>Not selected</li>
+                <li>UK 2</li>
+                <li>UK 18</li>
+                <li>UK 18L</li>
+                <li>UK 20</li>
+                <li>UK 20L</li>
+                <li>UK 20S</li>
+                <li>UK 22S</li>
+                <li>UK 22</li>
+            </ul>
+            <ul><a>Price range</a>
+                <li>Not selected</li>
+                <li>To &pound;99</li>
+                <li>&pound;100-&pound;299</li>
+                <li>From &pound;300</li>
+            </ul>
+        </div>
+                </div>
+
+                <div class="b-sort_wrapper">
+                    <select id="s1">
+                    <option value="0">Not selected</option>
+                    <option value="1">Nail the 90s</option>
+                    <option value="2">Casual style</option>
+                    <option value="3">New look</option>
+                    <option value="4">Sport</option>
+                    <option value="5">Vintage</option>
+                    <option value="6">Classical style</option>
+                </select>
+            </div>
+                 <div class="b-sort_wrapper">
+                    <select id="s2">
+                    <option value="0">Not selected</option>
+                    <option value="1">Coats &amp; Jackets</option>
+                    <option value="2">Dresses</option>
+                    <option value="3">Jersey Tops</option>
+                </select>
+            </div>
+                
+                <div class="b-sort_wrapper">
+                    <select id="s3">
+                    <option value="0">Not selected</option>
+                    <option value="1">Black</option>
+                    <option value="2">Blue</option>
+                    <option value="3">Red</option>
+                    <option value="4">Green</option>
+                    <option value="5">Golden</option>
+                </select>
+            </div>
+                <div class="b-sort_wrapper">
+                    <select id="s4">
+                    <option value="0">Not selected</option>
+                    <option value="1">Chi Chi London</option>
+                    <option value="2">Antipodium</option>
+                    <option value="3">Adidas</option>
+                    <option value="4">New Balance</option>
+                    <option value="5">River Island</option>
+                </select>
+            </div>
+                <div class="b-sort_wrapper">
+                    <select id="s5">
+                    <option value="0">Not selected</option>
+                    <option value="1">UK 2</option>
+                    <option value="2">UK 18</option>
+                    <option value="3">UK 18L</option>
+                    <option value="4">UK 20</option>
+                    <option value="5">UK 20L</option>
+                    <option value="6">UK 20S</option>
+                    <option value="7">UK 22S</option>
+                    <option value="8">UK 22</option>
+                    
+                </select>
+            </div>
+                <div class="b-sort_wrapper">
+                    <select id="s6">
+                    <option value="0">Not selected</option>
+                    <option value="1">To &pound;99</option>
+                    <option value="2">&pound;100-&pound;299</option>
+                    <option value="3">From &pound;300</option>
+                </select>
+            </div>
+            </nav>
+            <nav class='b-filter'>
+                <div class="b-filter_Category">
+                 <label>Category:</label>
+                    <button onclick="filterWoman()">Women</button>
+                    <button onclick="filterMan()">Man</button>
+                </div>
+                <div class="b-filter_Category">
+                    <label>Date:</label>
+                    <button onclick="filterDate()">New product</button>
+                </div>
+            </nav>
+            <section class="b-magazine" id="b-magazine">
+                <div class="b-magazine_item" id="b-magazine_item">
+
+                </div>
+                <div class="b-magazine_footer"><button class="b-magazine_button" onclick="showMore()">Show more</button></div>
+            </section>
+              <article class="b-banner">
+                <div class="b-banner_First"></div>
+                <div class="b-banner_Second"></div>
+                <div class="b-banner_Third"></div>
+            </article>
+              <nav class="b-info">
+            <div class="b-info_divLeft b-info_div">
+                <ul class="b-info_ul">
+                    <p class="b-info_ulTitle">Quick Links</p>
+                    <li>Store locator</li>
+                    <li>Gift cards</li>
+                    <li>Size duide</li>
+                    <li>About us</li>
+                    <li>Support</li>
+                </ul>
+                <ul class="b-info_ul">
+                    <p class="b-info_ulTitle">Customer Care</p>
+                    <li>Customer sevice</li>
+                    <li>Track my order</li>
+                    <li>Return policy</li>
+                    <li>Shipping &amp; delivery</li>
+                    <li>Contact us</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="b-info_divRight b-info_div">
+                <div class="b-info_divRight_first">
+                    <p class="b-info_ulTitle2">Questions</p>
+                    <p class="b-info_text">
+                        <i class="fa fa-twitter fa-fw inconsGray" aria-hidden="true"></i>
+                        Tweet us 
+                        <a href='' class="b-info_link">&#64;template</a>
+                    </p>
+                </div>
+                <div class="b-info_divRight_second">
+                    <p class="b-info_ulTitle2">Order by phone</p>
+                    <p class="b-info_text">8-800-409-47-12</p>
+                </div>
+                <div class="b-info_divRight_phrase">
+                    <p class="b-info_phrase">
+                        We have our own delivery sevice witch <br>
+                        operates in 23 major European cities. Delivery <br>
+                        time 3-5 days<br>
+                    </p>
+                </div>
+                <div id="b-info_botton">
+                <span id="link2">
+                <a href="" class="b-footer_link">Legal notice</a>
+                <a href="" class="b-footer_link">Privacy police</a>
+                <a href="" class="b-footer_link">Site map</a>
+                </span>
+                <div class="b-info_divRight_net">
+                    <button class="b-info_button">
+                        <a href=''><i class="fa fa-facebook fa-fw inconsDarkBlue" aria-hidden="true"></i></a>
+                    </button>
+                    <button class="b-info_button">
+                        <a href=''><i class="fa fa-twitter fa-fw inconsBlue" aria-hidden="true"></i></a>
+                    </button>
+                </div>
+                </div>
+            </div>    
+        </nav>
+        </section>
+         <footer class="b-footers">
+            <span class="b-footer_info">&copy; 2010-2015, The Template Group inc.</span>
+            <span class="b-footer_share">
+                <label for="grayReact" class="b-footer_shareTitle">Share</label>
+                <div class="b-footer_window" id="grayReact">1 437</div>
+            </span>
+            <span id="link1">
+                <a href="" class="b-footer_link">Legal notice</a>
+                <a href="" class="b-footer_link">Privacy police</a>
+                <a href="" class="b-footer_link">Site map</a>
+            </span>
+        </footer>
+        <script src="js/lodash.js"></script>
+        <script  src="data/catalog.js"></script>
+        <script  src="data/best-offer.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/shopping-bag.js"></script>
+        <script src="js/start.js"></script>
+        <script>
+             window.addEventListener("load", showSort, true);
+             window.addEventListener("load", showSortTablet, true);
+            window.addEventListener("load", create_grid(arr_product), true);
+       
+        </script>
+    </body>
+</html>

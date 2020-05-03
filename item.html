@@ -1,0 +1,219 @@
+<!DOCTYPE>
+<html>
+    <head><title></title>
+     <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/item.css">
+      <link rel="stylesheet" type="text/css" href="css/shopping-bag.css">
+           <link rel="stylesheet" type="text/css" href="css/start.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+    </head>
+    <body>
+    <header class="b-header">
+            <a class="b-header_title" href="start.html">Template</a>
+            <a class="b-header_title2" href="start.html">TL</a>
+            <div class="b-header_left">
+                 <span class="b-header_email">E-mail sing up</span>
+                
+                `<a class="b-header_bag"><i class="fa fa-shopping-bag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;<a id="b-header_bag" class="b-header_bag" href='shopping-bag.html'>Bag (0)</a></a>
+            </div>
+        </header>
+        <section class="main">
+              <nav class="b-menu" id="id-menu">
+            <nav class="b-menu_nav" tabindex='1' onblur="showMenu()" onfocus="closeMenu()">
+            <div class="b-menu_blockNav">
+                <ul class="b-menu_link">
+            <a href="" class="b-menu_title"><li class="b-menu_titleLi colorWoman">Women</li></a>
+            <a href="" class="b-menu_title"><li>Men</li></a>
+            <a href="" class="b-menu_title"><li>Handbags</li></a>
+            <a href="" class="b-menu_title"><li>Accesories</li></a>
+            <a href="" class="b-menu_title"><li>Sale</li></a>
+            <a href="" class="b-menu_title"><li>New Arrivals</li></a>
+            <a href="" class="b-menu_title"><li>Clearance</li></a>
+            <a href="" class="b-menu_title"><li>Store Locator</li></a>
+            <li id="lastLi">
+                 <div class="b-menu_blockSearch">
+                <div class="b-menu_divSearch">
+                    <input type="search" placeholder="Style name" class="b-menu_search">
+                    <input type="button" class="b-menu_searchButton">
+                </div>
+                
+            </div>
+            </li>
+        </ul>
+                </div>
+            </nav>  
+            <div class="b-menu_blockSearch" id="firstLi">
+                <div class="b-menu_divSearch">
+                    <input type="search" placeholder="Style name" class="b-menu_search">
+                    <input type="button" class="b-menu_searchButton" onclick="showSearch()" tabindex="1">
+                </div>
+                
+            </div>  
+            <div class="b-menu_blockSearchTablet">
+                <input type="search" placeholder="Style name" class="b-menu_search hideS" id='searchTablet'>
+                <input type="button" class="b-menu_searchTablet" onclick="showSearch()" tabindex="1">
+            </div>
+        </nav>
+              <nav class="b-title">
+                <a href="catalog.html" class="b-top">&#60; Back to catalog</a>
+            </nav>
+                <section class="b-content">
+                    <div class="b-content_slider">
+                        <div class="b-content_slider_mySlides">
+                                    <img src="" style="width:100%; height:100%" class="b-content_slider_picture">
+                                </div>
+
+                        <div class="b-content_slider_mySlides">
+                                        <img src="" style="width:100%; height:100%" class="b-content_slider_picture">
+                                </div>
+
+                        <div class="b-content_slider_mySlides">
+                                        <img src="" style="width:100%; height:100%" class="b-content_slider_picture">
+                                </div>
+                        <div class="b-content_slider_row">
+                                <div class="b-content_slider_column">
+                                <img class="b-content_slider_demo b-content_slider_elements" src="" style="width:100%" onclick="currentSlide(1)" alt="First image">
+                                </div>
+                                <div class="b-content_slider_column">
+                                <img class="b-content_slider_demo b-content_slider_elements" src="" style="width:100%" onclick="currentSlide(2)" alt="Second image">
+                                </div>
+                                <div class="b-content_slider_column">
+                                <img class="b-content_slider_demo b-content_slider_elements" src="" style="width:100%" onclick="currentSlide(3)" alt="Third image">
+                                </div>
+                        </div>
+ 
+                    </div>
+                    <div class="b-content_desription">
+                        <p class="b-content_desriptionTitle">Dark classic fit suit</p>
+                        <div class="b-content_desriptionText">
+                            <p class="b-content_desriptionText_cursive">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs and a a subtle stripe pattern throughout</p>
+                            <p class="b-content_desriptionText_price">&pound;65.50</p>
+                        </div>
+                        <div class="b-content_choose">
+                            <span id="SizeId">
+                                Size:
+<!--
+                                <div class="b-content_choose_Input">
+	                               <input id="radio-size1" type="radio" name="radio" value="UK52" checked>
+	                               <label for="radio-size1">UK 52</label>
+                                </div>
+                                <div class="b-content_choose_Input">
+	                               <input id="radio-size2" type="radio" name="radio" value="UK54">
+	                               <label for="radio-size2">UK 54</label>
+                                </div>
+                                <div class="b-content_choose_Input">
+	                               <input id="radio-size3" type="radio" name="radio" value="UK56">
+	                               <label for="radio-size3">UK 56</label>
+                                </div>
+-->
+                            </span>
+                            <span id="ColorId">
+                                Color:
+<!--
+                                <div class="b-content_choose_Input">
+	                               <input id="radio-color1" type="radio" name="radio2" value="Blue" checked>
+	                               <label for="radio-color1">Blue</label>
+                                </div>
+                                <div class="b-content_choose_Input">
+	                               <input id="radio-color2" type="radio" name="radio2" value="Black">
+	                               <label for="radio-color2">Black</label>
+                                </div>
+-->
+                            </span>
+                            
+                        </div>
+                        <div class="b-content_but">
+                            
+                                <button class="b-content_button">
+                                    <a href="shopping-bag.html">Add to bag</a>
+</button>
+                            </div>
+                    </div>
+            </section>
+              <article class="b-banner">
+                <div class="b-banner_First"></div>
+                <div class="b-banner_Second"></div>
+                <div class="b-banner_Third"></div>
+            </article>
+              <nav class="b-info">
+            <div class="b-info_divLeft b-info_div">
+                <ul class="b-info_ul">
+                    <p class="b-info_ulTitle">Quick Links</p>
+                    <li>Store locator</li>
+                    <li>Gift cards</li>
+                    <li>Size duide</li>
+                    <li>About us</li>
+                    <li>Support</li>
+                </ul>
+                <ul class="b-info_ul">
+                    <p class="b-info_ulTitle">Customer Care</p>
+                    <li>Customer sevice</li>
+                    <li>Track my order</li>
+                    <li>Return policy</li>
+                    <li>Shipping &amp; delivery</li>
+                    <li>Contact us</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="b-info_divRight b-info_div">
+                <div class="b-info_divRight_first">
+                    <p class="b-info_ulTitle2">Questions</p>
+                    <p class="b-info_text">
+                        <i class="fa fa-twitter fa-fw inconsGray" aria-hidden="true"></i>
+                        Tweet us 
+                        <a href='' class="b-info_link">&#64;template</a>
+                    </p>
+                </div>
+                <div class="b-info_divRight_second">
+                    <p class="b-info_ulTitle2">Order by phone</p>
+                    <p class="b-info_text">8-800-409-47-12</p>
+                </div>
+                <div class="b-info_divRight_phrase">
+                    <p class="b-info_phrase">
+                        We have our own delivery sevice witch <br>
+                        operates in 23 major European cities. Delivery <br>
+                        time 3-5 days<br>
+                    </p>
+                </div>
+                <div id="b-info_botton">
+                <span id="link2">
+                <a href="" class="b-footer_link">Legal notice</a>
+                <a href="" class="b-footer_link">Privacy police</a>
+                <a href="" class="b-footer_link">Site map</a>
+                </span>
+                <div class="b-info_divRight_net">
+                    <button class="b-info_button">
+                        <a href=''><i class="fa fa-facebook fa-fw inconsDarkBlue" aria-hidden="true"></i></a>
+                    </button>
+                    <button class="b-info_button">
+                        <a href=''><i class="fa fa-twitter fa-fw inconsBlue" aria-hidden="true"></i></a>
+                    </button>
+                </div>
+                </div>
+            </div>    
+        </nav>
+        </section>
+         <footer class="b-footers">
+            <span class="b-footer_info">&copy; 2010-2015, The Template Group inc.</span>
+            <span class="b-footer_share">
+                <label for="grayReact" class="b-footer_shareTitle">Share</label>
+                <div class="b-footer_window" id="grayReact">1 437</div>
+            </span>
+            <span id="link1">
+                <a href="" class="b-footer_link">Legal notice</a>
+                <a href="" class="b-footer_link">Privacy police</a>
+                <a href="" class="b-footer_link">Site map</a>
+            </span>
+        </footer>
+        <script src="js/lodash.js"></script>
+        <script  src="data/catalog.js"></script>
+        <script  src="data/best-offer.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/shopping-bag.js"></script>
+        <script src="js/start.js"></script>
+        <script>
+            window.addEventListener("load", getItem, true);
+        </script> 
+                
+    </body>
+</html>
