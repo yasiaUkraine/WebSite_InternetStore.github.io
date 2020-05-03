@@ -11,7 +11,6 @@ main{
     text-align: center;
     height: 30px;
     background-color: rgb( 247, 247, 247 );
-    clear: both;
 }
 /*ANSWER*/
 .b-bag_answer{
@@ -290,10 +289,6 @@ main{
     }
 }
 @media only screen and (max-width:550px){
-     .b-footer{
-        padding: 0 15px;
-        margin-top: 200px;
-    }
     .b-bag_answer{
         margin: 20px 0;
         width: 100%;
@@ -301,6 +296,7 @@ main{
     }
     .b-title{
         border-top: 0;
+        margin-top: 60px;
     }
     .b-bag{
         flex-direction: column;
@@ -358,6 +354,9 @@ main{
     }
     .b-link_firstSpan{
         font-size: 13px;
+    }
+     .b-footer{
+        margin-top: 200px;
     }
 }
 @media only screen and (max-width:400px){

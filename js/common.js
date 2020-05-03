@@ -27,6 +27,8 @@ var discountCommon=15;
 var showTextMore="Show more";
 var showTextLess="Show less";
 var answerSort="No results were found for your request.";
+var arr_price=["To £99","£100-£299","From £300"];
+var visionItem=arr_product.length-12;
 var arr_bag=[];
 class Product{
     constructor(obj) {

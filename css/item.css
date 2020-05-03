@@ -247,10 +247,8 @@
     }
 }
 @media only screen and (max-width:550px){
-     .b-footer{
-        padding: 0 15px;
-        margin-top: 200px;
-    }
+    
+    
     .b-banner{
         height: 250px;
     }
@@ -291,6 +289,9 @@
     }
     .b-content_choose{
         text-align: left;
+    }
+    .b-footer{
+        margin-top: 200px;
     }
 }
 @media only screen and (max-width:450px){

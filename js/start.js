@@ -417,7 +417,7 @@ function showItem(value){
       
   } 
 
-function create_grid(arr){
+function create_grid(arr, len){
     try{
         var elem=document.getElementById('b-magazine_item');
        elem.innerHTML='';
@@ -428,7 +428,7 @@ function create_grid(arr){
 
      let k=2;
     
-        for(let i=0; i<arr.length;i++){
+        for(let i=0; i<len;i++){
             if(i==4||i==3||i==2){
             var ad=document.createElement('div');
             ad.classList.add('b-magazine_ad');
@@ -495,7 +495,7 @@ function create_grid(arr){
             try{
                 elem.appendChild(divs);
             }catch(e){
-               
+                console.log();
             }
         }
 }
@@ -527,6 +527,9 @@ function showSort(){
         var sel = this.parentNode.parentNode.getElementsByTagName("select")[0];
                 if(this.parentNode.parentNode.childNodes[3].id=='Fashion'){
                     filterFashion(this.innerHTML);
+                }
+                if(this.parentNode.parentNode.childNodes[3].id=='Price range'){
+                    filterPrice(this.innerHTML);
                 }
         var wrapper = this.parentNode.previousSibling;
         for (let i = 0; i < sel.length; i++) {
@@ -591,31 +594,18 @@ function closeAllSelect(elmnt) {
 }
  var check=false;       
 function showMore(){
-    
     var elem=document.getElementById('b-magazine');
     var but=document.getElementsByClassName('b-magazine_button');
-
+    
     if(check==false){
          but[0].innerText=showTextLess;
         check=true;
-        switch(true){
-            case document.documentElement.clientWidth>1299: {elem.style.height='2300px'; break;}
-            case document.documentElement.clientWidth<1299 && document.documentElement.clientWidth>800: {elem.style.height='2300px'; break;}
-            case document.documentElement.clientWidth<800 && document.documentElement.clientWidth>600 : {elem.style.height='2800px';break;}
-            case document.documentElement.clientWidth<600 && document.documentElement.clientWidth>400 : {elem.style.height='3500px';break;}
-            case document.documentElement.clientWidth<400 && document.documentElement.clientWidth>350 : {celem.style.height='3200px';break;}
-        }
+        create_grid(arr_product, arr_product.length);
        
     }else{
         but[0].innerText=showTextMore ;
         check=false;
-        switch(true){
-            case document.documentElement.clientWidth>1300: { elem.style.height='1800px'; break;}
-            case document.documentElement.clientWidth<1300 && document.documentElement.clientWidth>800: { elem.style.height='1800px'; break;}
-            case document.documentElement.clientWidth<800 && document.documentElement.clientWidth>550 : {elem.style.height='1800px';break;}
-            case document.documentElement.clientWidth<550 && document.documentElement.clientWidth>450 : {elem.style.height='1700px';break;}
-            case document.documentElement.clientWidth<450 && document.documentElement.clientWidth>350 : {elem.style.height='2000px';break;}
-        }
+        create_grid(arr_product, arr_product.length-visionItem);
     }
     
 }
@@ -715,14 +705,14 @@ function chooseFilter(e){
        }
        if(flagW==false){
            flagW=true; 
-           create_grid(arr_filter);
+           create_grid(arr_filter,arr_filter.length);
             var elem=document.getElementById('women');
             elem.classList.add('colorWoman');
             var elem2=document.getElementById('man');
             elem2.classList.remove('colorWoman');
        }else{
            flagW=false; 
-           create_grid(arr_product);
+           create_grid(arr_product, arr_product.length-visionItem);
            var elem=document.getElementById('women');
             elem.classList.remove('colorWoman');
        }
@@ -737,14 +727,14 @@ function chooseFilter(e){
        }
         if(flagM==false){
             flagM=true;
-            create_grid(arr_filter);
+            create_grid(arr_filter, arr_filter.length);
             var elem=document.getElementById('man');
             elem.classList.add('colorWoman');
             var elem2=document.getElementById('women');
             elem2.classList.remove('colorWoman');
         }else{
             flagM=false;
-            create_grid(arr_product);
+            create_grid(arr_product, arr_product.length-visionItem);
             var elem=document.getElementById('man');
             elem.classList.remove('colorWoman');
         }
@@ -766,10 +756,10 @@ function chooseFilter(e){
                 }
             });
            
-            create_grid(arr_filter);
+            create_grid(arr_filter, arr_filter.length);
             flagDate=true;
         }else{
-            create_grid(arr_product);
+            create_grid(arr_product, arr_product.length-visionItem);
             flagDate=false;
         }
          
@@ -785,14 +775,54 @@ function chooseFilter(e){
             if(arr_filter.length==0){
                 showMessSort();
             }else{
-                create_grid(arr_filter);
+                create_grid(arr_filter,arr_filter.length);
             }
             
         }else{
-            create_grid(arr_product);
+            create_grid(arr_product, arr_product.length-visionItem);
         }
         
     }
+function filterPrice(s){
+    let arr_filter=[];
+    let k=-1;
+    for( let i=0; i<arr_price.length;i++){
+        if(arr_price[i]==s){
+           k=i; 
+        }
+    }
+    if(k==0){
+        for(let i=0; i<arr_product.length;i++){
+            if(arr_product[i].discountedPrice<90){
+                arr_filter.push(arr_product[i]);
+            }
+        }
+    }
+    if(k==1){
+        for(let i=0; i<arr_product.length;i++){
+            if(arr_product[i].discountedPrice>100 && arr_product[i].discountedPrice<299){
+                arr_filter.push(arr_product[i]);
+            }
+        }
+    }
+    if(k==2){
+        for(let i=0; i<arr_product.length;i++){
+            if(arr_product[i].discountedPrice>300){
+                arr_filter.push(arr_product[i]);
+            }
+        }
+    }
+    if(s!='Not selected'){
+            if(arr_filter.length==0){
+                showMessSort();
+            }else{
+                create_grid(arr_filter, arr_filter.length);
+            }
+            
+        }else{
+            create_grid(arr_product, arr_product.length-visionItem);
+        }
+}
 function showMessSort(){
     let value=document.getElementById('b-magazine_item');
     value.innerHTML='';
