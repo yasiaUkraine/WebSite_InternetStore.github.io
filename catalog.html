@@ -188,6 +188,10 @@
                     <label>Date:</label>
                     <button onclick="filterDate()">New product</button>
                 </div>
+                <div class="b-filter_CategorySmall">
+                    <button id="listSymbol">&equiv;</button>
+                    <button id="gridSymbol">&#x25A0;   &#x25A0;<br> &#x25A0;   &#x25A0;</button>
+                </div>
             </nav>
             <section class="b-magazine" id="b-magazine">
                 <div class="b-magazine_item" id="b-magazine_item">
@@ -279,7 +283,10 @@
         <script>
              window.addEventListener("load", showSort, true);
              window.addEventListener("load", showSortTablet, true);
-           
+           var gridCatalog=document.getElementById('gridSymbol');
+            var listCatalog=document.getElementById("listSymbol");
+            gridCatalog.addEventListener("click",create_grid, false );
+            listCatalog.addEventListener("click", create_list, false);
        if(document.documentElement.clientWidth<500){
         window.addEventListener("load", create_grid(arr_product, 8), true);
     }else{

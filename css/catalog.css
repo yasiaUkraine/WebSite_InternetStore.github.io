@@ -30,8 +30,63 @@
     float: left;
     float: right;
 }
-.b-magazine_wrapper:hover .b-offer_name{
+.b-magazine_wrapperList{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    padding: 20px 50px;
+    
+}
+.b-magazine_wrapperList_img{
+    width: 30%;
+    height: 400px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.b-magazine_wrapperList_img a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.b-magazine_wrapperList_img:hover{
+  cursor: pointer; 
+    background-blend-mode: overlay;
+    margin: 0 auto;
+    position: relative;
+}
+
+.b-magazine_wrapperList_title{
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+.b-magazine_wrapperList_description{
+    font-size: 18px;
+    font-family: cursive;
+    text-align: left;
+   padding: 100px;
+}
+.b-magazine_wrapperList_price{
+    text-align: left;
     color: crimson;
+    font-size: 22px;
+    font-weight: bold;
+}
+.b-cataloglistInfo{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+}
+.b-magazine_wrapperList:hover .b-magazine_wrapperList_title{
+    color: crimson;
+}
+.b-magazine_wrapperList_img:hover .b-offer_hidden{
+    display: block;
+    
 }
 .b-magazine_ad{
     width: 100%;
@@ -275,7 +330,7 @@
     font-family: "OpenSans";
     font-size: 18px;
     height: 100%;
-    width: auto;
+    
     text-align: left;
     padding: 0 20px;
     box-sizing: border-box;
@@ -297,6 +352,30 @@
     cursor: pointer;
 }
 
+.b-filter_CategorySmall{
+    position: relative;
+    font-family: "OpenSans";
+    font-size: 18px;
+    height: 100%;
+
+}
+.b-filter_CategorySmall button{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    background-color: white;
+    position: absolute;
+    border: 1px solid gray;
+}
+#gridSymbol{
+    left: 50px;
+    font-size: 18px;
+}
+#listSymbol{
+    left: 120px;
+    font-size: 45px;
+}
 .b-filter_Category button:hover{
      color: crimson;
     border-color: crimson;
@@ -318,6 +397,9 @@
 @media only screen and (max-width:950px){
     .b-magazine_wrapper{
         padding: 20px 15px;
+    }
+    .b-filter_Category button{
+        width: 100px;
     }
 }
 @media only screen and (max-width:850px){
@@ -365,6 +447,34 @@
         padding: 0;
         width: 100px;
         height: 40px;
+    }
+    .b-filter_CategorySmall button{
+        height: 40px;
+        width: 40px;
+    }
+    #gridSymbol{
+    left: 10px;
+    font-size: 15px;
+    }
+    #listSymbol{
+    left: 70px;
+    font-size: 40px;
+    }
+}
+@media only screen and (max-width:700px){
+    .b-filter{
+        flex-direction: column;
+        height: 150px;
+    }
+    .b-filter_Category{
+        padding-bottom: 10px;
+        font-size: 16px;
+    }
+    #gridSymbol{
+    left: 30px;
+    }
+    #listSymbol{
+    left: 90px;
     }
 }
 @media only screen and (max-width:650px){
@@ -419,14 +529,7 @@
         font-size: 15px;
         padding-right: 0;
     }
-    .b-filter{
-        flex-direction: column;
-        height: auto;
-    }
-    .b-filter_Category{
-        padding-bottom: 10px;
-        font-size: 16px;
-    }
+    
      .b-footer{
         margin-top: 200px;
     }

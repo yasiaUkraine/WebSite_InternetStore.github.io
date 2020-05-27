@@ -9,8 +9,10 @@ var bannerLeft=document.getElementById('b-ad_bannerLeft');
 var tabletSort=document.getElementsByClassName("b-sort_tablet");
 var spanSort=document.getElementById("b-sort_wrapperTablet");
 var cross=document.getElementsByClassName('redCross');
+
 try{
   bannerLeft.addEventListener("click", addSuit, false);  
+
 }catch(e){}
 
 try{
@@ -346,9 +348,7 @@ function getItem(){
 }
 function showItem(value){
     
-    if(value instanceof Product){
-        console.log("Hello");
-    }
+   
     let slides = document.getElementsByClassName("b-content_slider_picture");
     let elements = document.getElementsByClassName("b-content_slider_elements");
     let title = document.getElementsByClassName("b-content_desriptionTitle");
@@ -427,7 +427,10 @@ function create_grid(arr, len){
         }
 
      let k=2;
-    
+    if(len==undefined){
+        arr=arr_product;
+        len=arr_product.length;
+    }
         for(let i=0; i<len;i++){
             if(i==4||i==3||i==2){
             var ad=document.createElement('div');
@@ -499,7 +502,65 @@ function create_grid(arr, len){
             }
         }
 }
-
+function create_list(arr, len){
+    try{
+        var elem=document.getElementById('b-magazine_item');
+       elem.innerHTML='';
+        elem.addEventListener('click',setItem, false);
+    }catch(e){ 
+    }
+    if(len==undefined){
+        arr=arr_product;
+        len=6;
+    }
+    for(let i=0;i<len;i++){
+        var divs=document.createElement('div');
+            divs.classList.add('b-magazine_wrapperList');
+            divs.id=arr[i].id;
+            var img=document.createElement('div');
+            img.classList.add('b-magazine_wrapperList_img');
+            img.style.background=arr[i].thumbnail+",rgba(0, 0, 0, 0.5)";
+            img.style.backgroundPosition='centre';
+            img.style.backgroundRepeat='no-repeat';
+            img.style.backgroundSize='cover';
+            var name=document.createElement('p');
+            name.classList.add('b-magazine_wrapperList_title');
+            name.innerText=arr[i].title;
+            var des=document.createElement('p');
+            des.innerText=arr[i].description;
+            des.classList.add('b-magazine_wrapperList_description');
+            var price=document.createElement('p');
+            price.classList.add('b-magazine_wrapperList_price');
+            price.innerText=value_LB+arr[i].price;
+          var a=document.createElement('a');
+            a.href='item.html';
+            a.title=arr[i].title;
+            
+            if(arr[i].hasNew==true){
+                var newProduct=document.createElement('div');
+                newProduct.classList.add('b-offer_fotoNew');
+                newProduct.innerText=value_New;
+                a.appendChild(newProduct);
+            }
+            var viewProduct=document.createElement('p');
+                viewProduct.classList.add('b-offer_hidden');
+                viewProduct.innerText=value_View;
+                a.appendChild(viewProduct);
+            img.appendChild(a);
+        var commInfo=document.createElement('div');
+        commInfo.classList.add('b-cataloglistInfo');
+        commInfo.appendChild(name);
+        commInfo.appendChild(des);
+            divs.appendChild(img);
+            divs.appendChild(commInfo);
+            divs.appendChild(price);
+            try{
+                elem.appendChild(divs);
+            }catch(e){
+                console.log();
+            }
+    }
+}
 function addSuit(e){
     let value=JSON.stringify(arr_product[arr_product.length-1]);
     localStorage.setItem(itemId,value);
@@ -530,6 +591,18 @@ function showSort(){
                 }
                 if(this.parentNode.parentNode.childNodes[3].id=='Price range'){
                     filterPrice(this.innerHTML);
+                }
+                if(this.parentNode.parentNode.childNodes[3].id=='Size'){
+                    filterSize(this.innerHTML);
+                }
+                if(this.parentNode.parentNode.childNodes[3].id=='Brand'){
+                    filterBrand(this.innerHTML);
+                }
+                if(this.parentNode.parentNode.childNodes[3].id=='Color'){
+                    filterColor(this.innerHTML);
+                }
+                if(this.parentNode.parentNode.childNodes[3].id=='Product type'){
+                    filterType(this.innerHTML);
                 }
         var wrapper = this.parentNode.previousSibling;
         for (let i = 0; i < sel.length; i++) {
@@ -678,14 +751,14 @@ function chooseFilter(e){
         }
     }
 }
-        function showTabletFilter(){
+function showTabletFilter(){
             let tabletSort=document.getElementsByClassName("b-sort_tablet");
             tabletSort[0].style.display='flex';
             let cross=document.getElementsByClassName('redCross');
             cross[0].classList.remove('hide');
             cross[0].classList.add('show');
         }
-        function closeTabletFilter(){
+function closeTabletFilter(){
             let tabletSort=document.getElementsByClassName("b-sort_tablet");
             tabletSort[0].style.display='none';     
             let cross=document.getElementsByClassName('redCross');
@@ -695,7 +768,7 @@ function chooseFilter(e){
 
         }
     var flagW=false, flagM=false;
-   function filterWoman(){
+function filterWoman(){
        
        var arr_filter=[]
        for(let i=0; i<arr_product.length;i++){
@@ -718,7 +791,7 @@ function chooseFilter(e){
        }
       
    }
-    function filterMan(){
+function filterMan(){
        var arr_filter=[]
        for(let i=0; i<arr_product.length;i++){
            if(arr_product[i].category== 'men'){
@@ -741,7 +814,7 @@ function chooseFilter(e){
        
    }
     var flagDate=false;
-    function filterDate(){
+function filterDate(){
         if(flagDate==false){
             var arr_filter=[];
             arr_filter=arr_product.slice().sort(function(x,y){
@@ -764,7 +837,7 @@ function chooseFilter(e){
         }
          
     }
-    function filterFashion(s){
+function filterFashion(s){
         var arr_filter=[]
        for(let i=0; i<arr_product.length;i++){
            if(arr_product[i].fashion== s){
@@ -840,4 +913,76 @@ function showMessSort(){
     }catch(e){
         
     }
+}
+function filterSize(s){
+     let arr_filter=[];
+    for(let i=0; i< arr_product.length; i++){
+        if(arr_product[i].sizes.includes(s)){
+            arr_filter.push(arr_product[i]);
+        }
+    }
+    if(s!='Not selected'){
+            if(arr_filter.length==0){
+                showMessSort();
+            }else{
+                create_grid(arr_filter, arr_filter.length);
+            }
+            
+        }else{
+            create_grid(arr_product, arr_product.length-visionItem);
+        }
+}
+function filterColor(s){
+     let arr_filter=[];
+    for(let i=0; i< arr_product.length; i++){
+        if(arr_product[i].colors.includes(s)){
+            arr_filter.push(arr_product[i]);
+        }
+    }
+    if(s!='Not selected'){
+            if(arr_filter.length==0){
+                showMessSort();
+            }else{
+                create_grid(arr_filter, arr_filter.length);
+            }
+            
+        }else{
+            create_grid(arr_product, arr_product.length-visionItem);
+        }
+}
+function filterBrand(s){
+    let arr_filter=[];
+    for(let i=0; i< arr_product.length; i++){
+        if(s==arr_product[i].brand){
+            arr_filter.push(arr_product[i]);
+        }
+    }
+    if(s!='Not selected'){
+            if(arr_filter.length==0){
+                showMessSort();
+            }else{
+                create_grid(arr_filter, arr_filter.length);
+            }
+            
+        }else{
+            create_grid(arr_product, arr_product.length-visionItem);
+        }
+}
+function filterType(s){
+    let arr_filter=[];
+    for(let i=0; i< arr_product.length; i++){
+        if(s==arr_product[i].type){
+            arr_filter.push(arr_product[i]);
+        }
+    }
+    if(s!='Not selected'){
+            if(arr_filter.length==0){
+                showMessSort();
+            }else{
+                create_grid(arr_filter, arr_filter.length);
+            }
+            
+        }else{
+            create_grid(arr_product, arr_product.length-visionItem);
+        }
 }
